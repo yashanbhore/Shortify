@@ -51,9 +51,12 @@ func ShortenURL(c *fiber.Ctx) error {
 		})
 	}
 
-	// enforce https, SSL
+	// enforce https, SSL 
 
-	body.URL = helpers.EnforeHTTP(body.URL)
+	body.URL = helpers.EnforceHTTP(body.URL)
 
 
 }
+
+
+// https://chatgpt.com/c/d828f12e-39ad-4bd0-8e05-24ae6ec3325d
